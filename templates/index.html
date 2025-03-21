@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resolver Problema</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Resolver Problema</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="estado_inicial">Estado Inicial (ej: 4,3,2,1):</label>
+                <input type="text" name="estado_inicial" id="estado_inicial" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="estado_final">Estado Final (ej: 1,2,3,4):</label>
+                <input type="text" name="estado_final" id="estado_final" class="form-control" required>
+            </div>
+            <button type="submit" class="btn">Resolver</button>
+        </form>
+        {% if camino %}
+            <h2>Camino encontrado:</h2>
+            <p>{{ camino }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
